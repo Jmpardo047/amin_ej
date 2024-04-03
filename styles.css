@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow: hidden;
+}
+.anim{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#nube>img{
+    width: 25em;
+    position: absolute;
+    opacity: 0;
+    animation: opacity 5s ease-in-out 0.5s 1 normal forwards;
+    z-index: 1;
+}
+#lluvia>img{
+    width: 20em;
+    position: absolute;
+    right: 40vw;
+    bottom:100vh;
+    opacity: 1;
+    animation: lluvia 3s ease-in-out 2s 1 normal forwards;
+}
+#sol>img{
+    position: absolute;
+    width: 30em;
+    top: 1vh;
+    right: 70vw;
+    opacity: 0;
+    animation: sol 0.3s ease-in-out 5s 1 normal forwards;
+}
+#flor>img{
+    position: absolute;
+    width: 20em;
+    animation: flor 2s linear 5s normal forwards;
+    top: 100vh;
+    right: 35em;
+    opacity: 0;
+}
+#msj{
+    position: absolute;
+    background-color: rgba(183, 214, 46, 0.872);
+    border-radius: 100%;
+    width: 15em;
+    height: 15em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:10vh;
+    right: 45vw;
+    animation: txt 2s ease-in-out 7s normal forwards;
+    opacity: 0;
+}
+@keyframes txt{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes dissapear{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes flor{
+    0%{
+        opacity: 0;
+        top: 100vh;
+
+    }
+    100%{
+        opacity: 1;
+        top: 60vh;
+    }
+}
+@keyframes sol{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+        right: 0vw;
+    }
+    40%{
+        opacity: 1;
+        right: 38vw;
+    }
+    100%{
+        opacity: 0;
+        right: 38vw;
+    }
+}
+@keyframes lluvia{
+    0%{
+        opacity: 0;
+        bottom:50vh;
+    }
+    50%{
+        opacity: 1;
+        bottom: 0vh;
+    }
+    100%{
+        opacity: 0;
+        top: 100vh;
+    }
+}
+
